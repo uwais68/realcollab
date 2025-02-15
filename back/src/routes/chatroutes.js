@@ -1,9 +1,9 @@
 import express from "express";
-const router = express.Router();
+const chatRoutes = express.Router();
 
-router.get("/", (req, res) => {
+chatRoutes.get("/", (req, res) => {
   res.send("Chat route is working!");
 });
 
-export default router; // ✅ Ensure `default` export
+export default chatRoutes; // ✅ Ensure `default` export
 

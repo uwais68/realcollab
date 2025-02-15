@@ -1,8 +1,8 @@
 import express from "express";
-const router = express.Router();
+const taskRoutes = express.Router();
 
-router.get("/", (req, res) => {
+taskRoutes.get("/", (req, res) => {
   res.send("Task route is working!");
 });
 
-export default router; // ✅ Ensure `default` export
+export default taskRoutes; // ✅ Ensure `default` export
