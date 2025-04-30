@@ -1,6 +1,6 @@
-import Message from "src/models/Message.js";
-import ChatRoom from "src/models/ChatRoom.js";
-import UserActivity from "src/models/UserActivity.js";
+import Message from "../models/message.js";
+import ChatRoom from "../models/chatRoom.js";
+import UserActivity from "../models/userActivity.js";
 
 // 📩 Send Message
 export const sendMessage = async (req, res) => {

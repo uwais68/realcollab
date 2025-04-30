@@ -6,12 +6,12 @@ import http from "http";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 import xss from "xss-clean";
-
+ 
 // ✅ Import Routes (Ensure filenames match exactly)
 import connectDB from "./src/config/db.js"; // ✅ Ensure correct path
 import authRoutes from "./src/routes/authRoutes.js";
-import taskRoutes from "./src/routes/taskRoutes.js";
-import chatRoutes from "./src/routes/chatRoutes.js";
+import taskRoutes from "./src/routes/taskroutes.js";
+import chatRoutes from "./src/routes/chatroutes.js";
 import protectedRoutes from "./src/routes/protected.js"; // Import the protected routes
 import userRoutes from "./src/routes/userRoutes.js";
 import notificationRoutes from "./src/routes/notificationRoutes.js"; // Add Notification Routes
@@ -20,8 +20,8 @@ import timeLogRoutes from "./src/routes/timeLogRoutes.js";
 import otpRoutes from "./src/routes/otpRoutes.js"; // Import OTP routes
 import fileRoutes from "./src/routes/fileRoutes.js"; // Import file routes
 import sendOTP from "./src/services/otpService.js";
-import errorHandler from "./middleware/errorHandler.js";
-import messageRoutes from "./routes/messageRoutes.js";
+import errorHandler from "./src/middleware/errorHandler.js";
+import messageRoutes from "./src/routes/messageRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -139,3 +139,5 @@ const serverInstance = server.listen(PORT, () => {
     console.error("Server error:", err);
   }
 });
+export { io };
+

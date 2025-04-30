@@ -1,5 +1,5 @@
-import Message from "src/models/Message.js";
-import ChatRoom from "src/models/ChatRoom.js";
+import Message from "../models/message.js";
+import ChatRoom from "../models/chatRoom.js";
 
 // ✅ Send a Message (Text, File, Image, Voice, or Reply)
 export const sendMessage = async (req, res) => {

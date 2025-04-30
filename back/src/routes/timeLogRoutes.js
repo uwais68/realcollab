@@ -1,5 +1,5 @@
 import express from "express";
-import { createTimeLog, getTimeLogs } from "src/controllers/timeLogController.js";
+import { createTimeLog, getTimeLogs } from "../controllers/TimeLogController.js";
 import authMiddleware from "../middleware/authMiddleware.js"; // To ensure the user is authenticated
 
 const router = express.Router();

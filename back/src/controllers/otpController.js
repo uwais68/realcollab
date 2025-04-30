@@ -1,5 +1,5 @@
 // src/controllers/otpController.js
-import OTP from "../models/otpModel.js";
+import OTP from "../models/otpModels.js";
 import sendOTP from "../services/otpService.js"; // Make sure this points to the correct service
 
 // Generate OTP and send it to the user's email

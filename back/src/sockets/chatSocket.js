@@ -1,6 +1,6 @@
 import { Server } from "socket.io";
-import Message from "./models/Message.js";
-import ChatRoom from "./models/ChatRoom.js";
+import Message from "./models/message.js";
+import ChatRoom from "./models/chatRoom.js";
 
 const onlineUsers = new Map(); // Track online users
 

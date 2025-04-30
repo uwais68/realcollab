@@ -1,4 +1,4 @@
-import Task from "../models/Task.js";
+import Task from "../models/task.js";
 import Notification from "../models/Notification.js";
 import { io } from "../../server.js"; // Importing io from server.js
 import redisClient from "../config/redisClient.js"; // ✅ Import Redis client
