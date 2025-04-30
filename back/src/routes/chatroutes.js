@@ -1,9 +1,13 @@
 import express from "express";
-const chatRoutes = express.Router();
+import authMiddleware from "../middleware/authMiddleware.js";
+import { sendMessage, getMessages, markAsRead, updateTypingStatus, getLastSeen } from "src/controllers/chatController.js";
 
-chatRoutes.get("/", (req, res) => {
-  res.send("Chat route is working!");
-});
+const router = express.Router();
 
-export default chatRoutes; // ✅ Ensure `default` export
+router.post("/send", authMiddleware, sendMessage);
+router.get("/:chatRoom/messages", authMiddleware, getMessages);
+router.put("/mark-as-read", authMiddleware, markAsRead);
+router.put("/typing-status", authMiddleware, updateTypingStatus);
+router.get("/:userId/last-seen", authMiddleware, getLastSeen);
 
+export default router;
